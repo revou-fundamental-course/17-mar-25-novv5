@@ -13,36 +13,97 @@
         </header>
 
         <main>
-            <header>
-                <h2>Welcome to Katik</h2>
+            <header class="main-header">
+                <h2>Welcome to KATIK</h2>
+                <h4>(by Nova Indriani Nurcholifah Koswara)</h4>
             </header>
-            <p>Welcome to the home page of the website. This is the first page that you will see when you visit the website. This page will contain information about the website and what you can find on it. Test</p>
+            <p>
+                Katik adalah aplikasi kalkulator matematik sederhana yang dapat membantu Anda menghitung luas dan keliling bangun datar dua dimensi. Pilih salah satu fitur di bawah ini untuk memulai menghitung. Arahkan kusor menuju tombol persegi atau persegi panjang. 
+            </p>
+            <P>Selamat menghitung!</P>
 
             <div class="nav-fitur">
-                <a href="" class="nav-fitur-active">Persegi</a>
-                <a href="" class="nav-fitur-non-active">Persegi Panjang</a>
+                <a href="#" class="nav-fitur-active" id="persegiLink">Persegi</a>
+                <a href="#" class="nav-fitur-non-active" id="persegiPanjangLink">Persegi Panjang</a>
             </div>
 
-            <section>    
+            <section id="persegiSection" class="section-content">    
                 <header class="section-header">
                     <h3>Luas Persegi</h3>
                 </header>
 
-                <div class="section-image"></div>
-                <div class="calculate-content"></div>
-            </section>
-            
-            <section>    
+                <div class="section-image-persegi"></div>
+                <p>Persegi adalah bangun datar dua dimensi yang memiliki sisi-sisi yang sama panjang dan memiliki empat sudut yang sama besar. Luas persegi dapat dihitung dengan rumus berikut:</p>
+                <p>Luas = sisi x sisi</p>
+                <p>Di mana sisi adalah panjang sisi persegi.</p>
+
+                <div class="calculate-content">
+                    <input type="number" id="sisiLuas" placeholder="Masukkan panjang sisi (cm)">
+                    <button onclick="hitungLuasPersegi()">Hitung</button>
+                    <button onclick="resetFormLuas()">Reset</button>
+                    <p id="hasilLuasPersegi"></p>
+                </div>
+                <script src="js/luasPersegi.js"></script>
+                
                 <header class="section-header">
                     <h3>Keliling Persegi</h3>
                 </header>
 
-                <div class="section-image"></div>
-                <div class="calculate-content"></div>
+                <div class="section-image-persegi"></div>
+                <p>Persegi adalah bangun datar dua dimensi yang memiliki sisi-sisi yang sama panjang dan memiliki empat sudut yang sama besar. Luas persegi dapat dihitung dengan rumus berikut:</p>
+                <p>Keliling = 4 x sisi</p>
+                <p>Di mana sisi adalah panjang sisi persegi.</p>
+
+                <div class="calculate-content">
+                    <input type="number" id="sisiKeliling" placeholder="Masukkan panjang sisi (cm)">
+                    <button onclick="hitungKelilingPersegi()">Hitung</button>
+                    <button onclick="resetFormKeliling()">Reset</button>
+                    <p id="hasilKelilingPersegi"></p>
+                </div>
+                <script src="js/kelilingPersegi.js"></script>
+            </section>
+            
+            <section id="persegiPanjangSection" class="section-content hidden">
+                <header class="section-header">
+                    <h3>Luas Persegi Panjang</h3>
+                </header>
+    
+                <div class="section-image-persepanjang"></div>
+                <p>Persegi Panjang adalah bangun datar dua dimensi yang memiliki sisi-sisi yang berlawanan sama panjang dan memiliki empat sudut yang sama besar. Luas persegi panjang dapat dihitung dengan rumus berikut:</p>
+                <p>Luas = panjang x lebar</p>
+                <p>Di mana panjang dan lebar adalah panjang sisi persegi panjang.</p>
+    
+                <div class="calculate-content">
+                    <input type="number" id="panjangLuas" placeholder="Masukkan panjang (cm)">
+                    <input type="number" id="lebarLuas" placeholder="Masukkan lebar (cm)">
+                    <button onclick="hitungLuasPersegiPanjang()">Hitung</button>
+                    <button onclick="resetFormLuasPersegiPanjang()">Reset</button>
+                    <p id="hasilLuasPersegiPanjang"></p>
+                </div>
+                <script src="js/luasPersegiPanjang.js"></script>
+    
+                <header class="section-header">
+                    <h3>Keliling Persegi Panjang</h3>
+                </header>
+    
+                <div class="section-image-persepanjang"></div>
+                <p>Persegi Panjang adalah bangun datar dua dimensi yang memiliki sisi-sisi yang berlawanan sama panjang dan memiliki empat sudut yang sama besar. Keliling persegi panjang dapat dihitung dengan rumus berikut:</p>
+                <p>Keliling = 2 x (panjang + lebar)</p>
+                <p>Di mana panjang dan lebar adalah panjang sisi persegi panjang.</p>
+    
+                <div class="calculate-content">
+                    <input type="number" id="panjangKeliling" placeholder="Masukkan panjang (cm)">
+                    <input type="number" id="lebarKeliling" placeholder="Masukkan lebar (cm)">
+                    <button onclick="hitungKelilingPersegiPanjang()">Hitung</button>
+                    <button onclick="resetFormKelilingPersegiPanjang()">Reset</button>
+                    <p id="hasilKelilingPersegiPanjang"></p>
+                </div>
+                <script src="js/kelilingPersegiPanjang.js"></script>
             </section>
         </main>
         <footer>
-            <p>&copy; 2025 by Nova Indriani N. K</p>
+            <p>&copy; 2025 by Nova Indriani Nurcholifah Koswara</p>
+        </footer>
+        <script src="js/main.js"></script>
     </body>
-   
 </html>
